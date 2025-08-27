@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Full-Page Screenshot Pro",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Take pixel-perfect, full-page screenshots with built-in editing tools and multiple export formats",
   "permissions": [
     "activeTab",
@@ -10,20 +10,10 @@
     "notifications",
     "scripting"
   ],
-  "host_permissions": [
-    "http://*/*",
-    "https://*/*"
-  ],
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
-  ],
+
   "action": {
     "default_popup": "popup.html",
     "default_title": "Take Full-Page Screenshot",
@@ -51,8 +41,8 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["viewer.html", "editor.html", "help.html", "js/screenshot-engine.js", "assets/*"],
-      "matches": ["http://*/*", "https://*/*"]
+      "resources": ["viewer.html", "editor.html", "help.html", "js/screenshot-engine.js"],
+      "matches": ["<all_urls>"]
     }
   ],
   "options_page": "options.html"

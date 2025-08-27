@@ -5,6 +5,26 @@ All notable changes to Screenshot Pro will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2024-08-27
+
+### Fixed
+- **Chrome Web Store Privacy**: Removed broad host permissions for faster approval
+- **ActiveTab Only**: Now uses only activeTab permission for maximum privacy
+- **Content Scripts**: Removed static content scripts, using dynamic injection instead
+- **Host Permissions**: Completely removed host_permissions section
+
+### Changed
+- **Privacy-First Approach**: Extension now only accesses active tab when user clicks
+- **Dynamic Injection**: Content script injected only when needed via activeTab
+- **Reduced Permissions**: Minimal permission footprint for Chrome Web Store approval
+- **Better Security**: No background access to all websites
+
+### Technical
+- Removed `host_permissions` section from manifest.json
+- Removed static `content_scripts` section
+- Using `chrome.scripting.executeScript` with activeTab
+- Maintained all functionality while improving privacy
+
 ## [1.1.1] - 2024-08-27
 
 ### Fixed
