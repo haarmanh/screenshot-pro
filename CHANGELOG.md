@@ -5,6 +5,19 @@ All notable changes to Screenshot Pro will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2024-08-27
+
+### Fixed
+- **Chrome Web Store Compatibility**: Fixed host permissions issue for publication
+- **Manifest V3 Compliance**: Updated permissions structure for better Chrome Web Store approval
+- **Host Permissions**: Changed from `<all_urls>` to specific `http://*/*` and `https://*/*` patterns
+
+### Technical
+- Added explicit `host_permissions` section in manifest.json
+- Updated content_scripts matches pattern
+- Updated web_accessible_resources matches pattern
+- Improved Chrome Web Store compliance
+
 ## [1.1.0] - 2024-08-27
 
 ### Added
