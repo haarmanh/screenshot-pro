@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Viewer - Screenshot Pro</title>
+    <link rel="stylesheet" href="css/viewer.css">
+</head>
+<body>
+    <div class="viewer-container">
+        <header class="toolbar">
+            <div class="toolbar-left">
+                <h1>Screenshot Viewer</h1>
+                <span id="imageInfo" class="image-info"></span>
+            </div>
+            
+            <div class="toolbar-center">
+                <div class="zoom-controls">
+                    <button id="zoomOut" class="tool-btn">🔍-</button>
+                    <span id="zoomLevel">100%</span>
+                    <button id="zoomIn" class="tool-btn">🔍+</button>
+                    <button id="fitToScreen" class="tool-btn">⛶</button>
+                </div>
+            </div>
+            
+            <div class="toolbar-right">
+                <button id="editBtn" class="primary-btn">✏️ Edit</button>
+                <div class="export-group">
+                    <button id="downloadBtn" class="primary-btn">💾 Download</button>
+                    <select id="exportFormat">
+                        <option value="png">PNG</option>
+                        <option value="jpeg">JPEG</option>
+                        <option value="pdf">PDF</option>
+                    </select>
+                </div>
+                <button id="copyBtn" class="secondary-btn">📋 Copy</button>
+                <button id="closeBtn" class="close-btn" title="Close viewer (Escape)">✖️ Close</button>
+            </div>
+        </header>
+        
+        <main class="viewer-main">
+            <div id="imageContainer" class="image-container">
+                <img id="screenshotImage" alt="Screenshot" />
+                <div id="loadingSpinner" class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading screenshot...</p>
+                </div>
+            </div>
+        </main>
+        
+
+    </div>
+    
+    <script src="js/viewer.js"></script>
+</body>
+</html>

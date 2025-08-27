@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Pro</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <img src="icons/icon32.png" alt="Screenshot Pro" class="logo">
+            <h1>Screenshot Pro</h1>
+        </div>
+        
+        <div class="main-actions">
+            <button id="takeScreenshot" class="primary-btn">
+                <span class="icon">📸</span>
+                Take Full-Page Screenshot
+            </button>
+            
+            <div class="shortcut-hint">
+                Shortcut: Alt+Shift+P
+            </div>
+        </div>
+        
+        <div class="quick-settings">
+            <div class="setting-row">
+                <label for="format">Format:</label>
+                <select id="format">
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="pdf">PDF</option>
+                </select>
+            </div>
+            
+            <div class="setting-row">
+                <label for="quality">Quality:</label>
+                <select id="quality">
+                    <option value="high">High</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <button id="openSettings" class="secondary-btn">Settings</button>
+            <button id="openHelp" class="secondary-btn">Help</button>
+            <button id="reportBug" class="secondary-btn">Report Bug</button>
+        </div>
+        
+        <div id="status" class="status hidden"></div>
+    </div>
+    
+    <script src="js/popup.js"></script>
+</body>
+</html>

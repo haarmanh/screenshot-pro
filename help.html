@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Screenshot Pro</title>
+    <link rel="stylesheet" href="css/help.css">
+</head>
+<body>
+    <div class="help-container">
+        <header class="help-header">
+            <img src="icons/icon48.png" alt="Screenshot Pro" class="logo">
+            <h1>📚 Screenshot Pro Help</h1>
+            <button id="closeHelp" class="close-btn" title="Close Help (Escape)">✖️</button>
+        </header>
+
+        <main class="help-content">
+            <section class="help-section">
+                <h2>🚀 Quick Start</h2>
+                <ol>
+                    <li><strong>Take Screenshot:</strong> Click the extension icon or press <kbd>Alt+Shift+P</kbd></li>
+                    <li><strong>View & Edit:</strong> Screenshot opens automatically in viewer</li>
+                    <li><strong>Save or Export:</strong> Use Download, Copy, or Edit buttons</li>
+                </ol>
+            </section>
+
+            <section class="help-section">
+                <h2>⌨️ Keyboard Shortcuts</h2>
+                <div class="shortcuts-grid">
+                    <div class="shortcut-item">
+                        <kbd>Alt+Shift+P</kbd>
+                        <span>Take Screenshot</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Escape</kbd>
+                        <span>Close Viewer/Editor</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Ctrl+S</kbd>
+                        <span>Save (in Editor/Viewer)</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Ctrl+C</kbd>
+                        <span>Copy to Clipboard</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Ctrl+E</kbd>
+                        <span>Open Editor</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>+/-</kbd>
+                        <span>Zoom In/Out</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>0</kbd>
+                        <span>Fit to Screen</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>1-5</kbd>
+                        <span>Select Editor Tools</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="help-section">
+                <h2>🛠️ Editor Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <span class="tool-icon">✂️</span>
+                        <div>
+                            <strong>Crop (1)</strong>
+                            <p>Select area to crop image</p>
+                        </div>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-icon">📝</span>
+                        <div>
+                            <strong>Text (2)</strong>
+                            <p>Add text annotations</p>
+                        </div>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-icon">➡️</span>
+                        <div>
+                            <strong>Arrow (3)</strong>
+                            <p>Draw arrows and lines</p>
+                        </div>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-icon">🖍️</span>
+                        <div>
+                            <strong>Highlight (4)</strong>
+                            <p>Highlight important areas</p>
+                        </div>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-icon">😀</span>
+                        <div>
+                            <strong>Emoji (5)</strong>
+                            <p>Add emoji stickers</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="help-section">
+                <h2>🔧 Troubleshooting</h2>
+                <div class="faq-item">
+                    <h3>Screenshot not working?</h3>
+                    <ul>
+                        <li>Refresh the page and try again</li>
+                        <li>Check you're not on a restricted page (chrome://, extensions)</li>
+                        <li>Ensure extension permissions are granted</li>
+                    </ul>
+                </div>
+                <div class="faq-item">
+                    <h3>Can't see all buttons?</h3>
+                    <ul>
+                        <li>Try making your browser window larger</li>
+                        <li>Use keyboard shortcuts as alternatives</li>
+                        <li>Check if browser zoom is set too high</li>
+                    </ul>
+                </div>
+                <div class="faq-item">
+                    <h3>Editor not responding?</h3>
+                    <ul>
+                        <li>Press <kbd>Escape</kbd> to cancel and try again</li>
+                        <li>Reload the extension in chrome://extensions/</li>
+                        <li>Check browser console for error messages</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="help-section">
+                <h2>📋 Export Formats</h2>
+                <div class="format-grid">
+                    <div class="format-item">
+                        <strong>PNG</strong>
+                        <p>Best for screenshots with text and sharp edges</p>
+                    </div>
+                    <div class="format-item">
+                        <strong>JPEG</strong>
+                        <p>Smaller file size, good for photos</p>
+                    </div>
+                    <div class="format-item">
+                        <strong>PDF</strong>
+                        <p>Perfect for documents and sharing</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="help-section">
+                <h2>⚙️ Settings</h2>
+                <p>Access settings from the popup to configure:</p>
+                <ul>
+                    <li>Default export format and quality</li>
+                    <li>Filename templates with timestamps</li>
+                    <li>Capture options and behavior</li>
+                    <li>Keyboard shortcuts customization</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="help-footer">
+            <p>Screenshot Pro v1.0.0 | <a href="#" id="reportBugLink">Report Bug</a></p>
+        </footer>
+    </div>
+
+    <script src="js/help.js"></script>
+</body>
+</html>

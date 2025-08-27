@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Editor - Screenshot Pro</title>
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+    <div class="editor-container">
+        <header class="editor-toolbar">
+            <div class="toolbar-section">
+                <h1>Screenshot Editor</h1>
+                <div class="help-text">Press <kbd>Escape</kbd> to cancel or <kbd>Ctrl+S</kbd> to save</div>
+            </div>
+            
+            <div class="toolbar-section tools">
+                <div class="tool-group">
+                    <button id="cropTool" class="tool-btn active" data-tool="crop">✂️ Crop</button>
+                    <button id="textTool" class="tool-btn" data-tool="text">📝 Text</button>
+                    <button id="arrowTool" class="tool-btn" data-tool="arrow">➡️ Arrow</button>
+                    <button id="highlightTool" class="tool-btn" data-tool="highlight">🖍️ Highlight</button>
+                    <button id="emojiTool" class="tool-btn" data-tool="emoji">😀 Emoji</button>
+                </div>
+                
+                <div class="tool-group">
+                    <button id="undoBtn" class="tool-btn">↶ Undo</button>
+                    <button id="redoBtn" class="tool-btn">↷ Redo</button>
+                </div>
+            </div>
+            
+            <div class="toolbar-section actions">
+                <button id="saveBtn" class="primary-btn" title="Save and return to viewer (Ctrl+S)">💾 Save</button>
+                <button id="exportBtn" class="primary-btn" title="Download edited image">📤 Export</button>
+                <button id="cancelBtn" class="secondary-btn" title="Cancel without saving (Escape)">❌ Cancel</button>
+            </div>
+        </header>
+        
+        <div class="editor-main">
+            <aside class="tool-panel">
+                <div id="cropPanel" class="tool-options active">
+                    <h3>Crop Tool</h3>
+                    <div class="option-group">
+                        <label>Aspect Ratio:</label>
+                        <select id="aspectRatio">
+                            <option value="free">Free</option>
+                            <option value="1:1">1:1 (Square)</option>
+                            <option value="4:3">4:3</option>
+                            <option value="16:9">16:9</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="textPanel" class="tool-options">
+                    <h3>Text Tool</h3>
+                    <div class="option-group">
+                        <label>Font Size:</label>
+                        <input type="range" id="fontSize" min="12" max="72" value="16">
+                        <span id="fontSizeValue">16px</span>
+                    </div>
+                    <div class="option-group">
+                        <label>Color:</label>
+                        <input type="color" id="textColor" value="#000000">
+                    </div>
+                    <div class="option-group">
+                        <label>Style:</label>
+                        <select id="textStyle">
+                            <option value="normal">Normal</option>
+                            <option value="bubble">Speech Bubble</option>
+                            <option value="callout">Callout</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="arrowPanel" class="tool-options">
+                    <h3>Arrow Tool</h3>
+                    <div class="option-group">
+                        <label>Color:</label>
+                        <input type="color" id="arrowColor" value="#ff0000">
+                    </div>
+                    <div class="option-group">
+                        <label>Width:</label>
+                        <input type="range" id="arrowWidth" min="2" max="10" value="3">
+                        <span id="arrowWidthValue">3px</span>
+                    </div>
+                </div>
+                
+                <div id="highlightPanel" class="tool-options">
+                    <h3>Highlight Tool</h3>
+                    <div class="option-group">
+                        <label>Color:</label>
+                        <input type="color" id="highlightColor" value="#ffff00">
+                    </div>
+                    <div class="option-group">
+                        <label>Opacity:</label>
+                        <input type="range" id="highlightOpacity" min="0.1" max="1" step="0.1" value="0.5">
+                        <span id="highlightOpacityValue">50%</span>
+                    </div>
+                </div>
+                
+                <div id="emojiPanel" class="tool-options">
+                    <h3>Emoji Stickers</h3>
+                    <div class="emoji-grid">
+                        <button class="emoji-btn" data-emoji="😀">😀</button>
+                        <button class="emoji-btn" data-emoji="😂">😂</button>
+                        <button class="emoji-btn" data-emoji="😍">😍</button>
+                        <button class="emoji-btn" data-emoji="🤔">🤔</button>
+                        <button class="emoji-btn" data-emoji="👍">👍</button>
+                        <button class="emoji-btn" data-emoji="👎">👎</button>
+                        <button class="emoji-btn" data-emoji="❤️">❤️</button>
+                        <button class="emoji-btn" data-emoji="⭐">⭐</button>
+                        <button class="emoji-btn" data-emoji="✅">✅</button>
+                        <button class="emoji-btn" data-emoji="❌">❌</button>
+                        <button class="emoji-btn" data-emoji="⚠️">⚠️</button>
+                        <button class="emoji-btn" data-emoji="💡">💡</button>
+                    </div>
+                </div>
+            </aside>
+            
+            <div class="canvas-container">
+                <canvas id="editorCanvas"></canvas>
+                <div id="cropOverlay" class="crop-overlay hidden"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/editor.js"></script>
+</body>
+</html>

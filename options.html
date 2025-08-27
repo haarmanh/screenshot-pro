@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Screenshot Pro</title>
+    <link rel="stylesheet" href="css/options.css">
+</head>
+<body>
+    <div class="options-container">
+        <header class="options-header">
+            <h1>Screenshot Pro Settings</h1>
+            <p>Configure your screenshot preferences and shortcuts</p>
+        </header>
+        
+        <main class="options-main">
+            <section class="settings-section">
+                <h2>Screenshot Settings</h2>
+                
+                <div class="setting-group">
+                    <label for="defaultFormat">Default Export Format:</label>
+                    <select id="defaultFormat">
+                        <option value="png">PNG (Lossless)</option>
+                        <option value="jpeg">JPEG (Compressed)</option>
+                        <option value="pdf">PDF (Document)</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="defaultQuality">Default Quality:</label>
+                    <select id="defaultQuality">
+                        <option value="high">High (Best quality)</option>
+                        <option value="medium">Medium (Balanced)</option>
+                        <option value="low">Low (Smaller file)</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="backgroundColor">Background Color for Transparent Elements:</label>
+                    <input type="color" id="backgroundColor" value="#ffffff">
+                    <span class="help-text">Used when capturing transparent elements</span>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="resolution">Output Resolution:</label>
+                    <select id="resolution">
+                        <option value="original">Original (No scaling)</option>
+                        <option value="2x">2x (High DPI)</option>
+                        <option value="1.5x">1.5x (Medium DPI)</option>
+                        <option value="0.5x">0.5x (Compressed)</option>
+                    </select>
+                </div>
+            </section>
+            
+            <section class="settings-section">
+                <h2>Capture Settings</h2>
+                
+                <div class="setting-group">
+                    <label>
+                        <input type="checkbox" id="captureIframes" checked>
+                        Capture content inside iframes
+                    </label>
+                </div>
+                
+                <div class="setting-group">
+                    <label>
+                        <input type="checkbox" id="smartScrolling" checked>
+                        Enable intelligent scrolling detection
+                    </label>
+                </div>
+                
+                <div class="setting-group">
+                    <label>
+                        <input type="checkbox" id="cacheEnabled" checked>
+                        Enable smart caching for better performance
+                    </label>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="scrollDelay">Scroll Delay (ms):</label>
+                    <input type="range" id="scrollDelay" min="100" max="2000" value="500" step="100">
+                    <span id="scrollDelayValue">500ms</span>
+                    <span class="help-text">Time to wait between scroll captures</span>
+                </div>
+            </section>
+            
+            <section class="settings-section">
+                <h2>Filename Settings</h2>
+                
+                <div class="setting-group">
+                    <label for="filenameTemplate">Filename Template:</label>
+                    <input type="text" id="filenameTemplate" value="screenshot-{timestamp}" placeholder="screenshot-{timestamp}">
+                    <span class="help-text">Available variables: {timestamp}, {date}, {time}, {title}, {domain}</span>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="timestampFormat">Timestamp Format:</label>
+                    <select id="timestampFormat">
+                        <option value="iso">ISO (2024-07-04T21-55-30)</option>
+                        <option value="simple">Simple (20240704-215530)</option>
+                        <option value="readable">Readable (2024-07-04_21-55-30)</option>
+                    </select>
+                </div>
+            </section>
+            
+            <section class="settings-section">
+                <h2>Keyboard Shortcuts</h2>
+                
+                <div class="setting-group">
+                    <label>Take Screenshot:</label>
+                    <div class="shortcut-display">
+                        <span id="currentShortcut">Alt+Shift+P</span>
+                        <button id="changeShortcut" class="secondary-btn">Change</button>
+                    </div>
+                    <span class="help-text">Click "Change" and press your desired key combination</span>
+                </div>
+            </section>
+            
+            <section class="settings-section">
+                <h2>Advanced Settings</h2>
+                
+                <div class="setting-group">
+                    <label>
+                        <input type="checkbox" id="debugMode">
+                        Enable debug mode (for troubleshooting)
+                    </label>
+                </div>
+                
+                <div class="setting-group">
+                    <label>
+                        <input type="checkbox" id="autoOpenViewer" checked>
+                        Automatically open viewer after capture
+                    </label>
+                </div>
+                
+                <div class="setting-group">
+                    <button id="clearCache" class="secondary-btn">Clear Cache</button>
+                    <button id="resetSettings" class="secondary-btn">Reset All Settings</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="options-footer">
+            <div class="save-status" id="saveStatus"></div>
+            <button id="saveSettings" class="primary-btn">Save Settings</button>
+        </footer>
+    </div>
+    
+    <script src="js/options.js"></script>
+</body>
+</html>
