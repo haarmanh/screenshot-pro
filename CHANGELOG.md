@@ -5,6 +5,30 @@ All notable changes to Screenshot Pro will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2024-08-27
+
+### Added
+- **Help System**: Comprehensive help page with keyboard shortcuts and troubleshooting
+- **Close Functionality**: Close buttons and Escape key support for viewer and editor
+- **Help Button**: Added help button to popup interface
+- **Tooltips**: Added helpful tooltips to buttons throughout the application
+- **Better Navigation**: Improved user experience with clear exit options
+
+### Fixed
+- **Critical Bug**: Fixed duplicate case statement in background.js that caused "Unknown action" errors
+- **Dead Code**: Removed unreachable code in content script that prevented proper execution
+- **UI Issues**: Improved button visibility and styling for better user experience
+
+### Changed
+- **Button Styling**: Enhanced button appearance with better colors and spacing
+- **Toolbar Layout**: Improved toolbar responsiveness and visibility
+- **Documentation**: Updated README with comprehensive installation and usage instructions
+
+### Technical
+- **Manifest**: Added help.html to web_accessible_resources
+- **Code Quality**: Improved error handling and code organization
+- **Performance**: Optimized screenshot capture flow
+
 ## [1.0.0] - 2024-08-27
 
 ### Added
